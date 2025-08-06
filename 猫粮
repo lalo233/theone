@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="专业猫粮选购指南，了解如何为您的爱猫选择最合适的营养猫粮，查看优质猫粮品牌推荐和科学喂养建议。">
+    <meta name="keywords" content="猫粮, 猫咪营养, 猫粮推荐, 猫粮选购, 猫咪健康, 猫粮品牌">
+    <title>喵星人营养站 - 专业猫粮选购指南与推荐</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f6f1;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #ff9a44 0%, #ff6b6b 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            font-weight: 300;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23ff9a44" opacity="0.1"/><path d="M0 50 Q 25 30, 50 50 T 100 50" stroke="%23ff9a44" stroke-width="0.5" fill="none"/></svg>');
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        /* 产品展示 */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #ff9a44;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-img {
+            height: 220px;
+            background-color: #ffefe5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .product-img i {
+            font-size: 6rem;
+            color: #ff9a44;
+            opacity: 0.8;
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-features {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature i {
+            font-size: 1.8rem;
+            color: #ff9a44;
+            margin-bottom: 8px;
+        }
+        
+        .feature span {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price .amount {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff6b6b;
+        }
+        
+        /* 选购指南 */
+        .guide {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 70px;
+        }
+        
+        .guide-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .guide-step {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .step-number {
+            min-width: 50px;
+            height: 50px;
+            background: #ffefe5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff6b6b;
+        }
+        
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .step-content p {
+            color: #666;
+        }
+        
+        /* 营养信息 */
+        .nutrition {
+            background: linear-gradient(135deg, #ffefe5 0%, #fff8f3 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 70px;
+        }
+        
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .nutrition-table th, .nutrition-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ffd9c3;
+        }
+        
+        .nutrition-table th {
+            background-color: #ff9a44;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .nutrition-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #ff6b6b;
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b6b;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .guide, .nutrition {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <h1>喵星人<span>营养站</span></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#">猫粮产品</a></li>
+                        <li><a href="#">营养指南</a></li>
+                        <li><a href="#">喂养技巧</a></li>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>为您的爱猫选择最佳营养</h2>
+                <p>专业猫粮推荐与科学喂养指南，让您的猫咪健康快乐成长</p>
+                <a href="#products" class="btn">探索优质猫粮</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="container">
+        <div class="section-title">
+            <h2 id="products">精选猫粮产品</h2>
+        </div>
+        
+        <div class="products">
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-fish"></i>
+                    <div class="product-tag">幼猫专用</div>
+                </div>
+                <div class="product-info">
+                    <h3>海洋鱼幼猫粮</h3>
+                    <p>专为幼猫设计，富含DHA促进大脑发育，高蛋白配方助力健康成长。</p>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-seedling"></i>
+                            <span>天然成分</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bone"></i>
+                            <span>钙质强化</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>心脏健康</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price">
+                        <div class="amount">¥168</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <div class="product-tag">成猫优选</div>
+                </div>
+                <div class="product-info">
+                    <h3>鲜鸡肉成猫粮</h3>
+                    <p>精选优质鸡肉，高蛋白低脂肪配方，维持健康体重，促进肌肉发育。</p>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>无谷物</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-feather"></i>
+                            <span>低敏配方</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-teeth"></i>
+                            <span>口腔健康</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price">
+                        <div class="amount">¥198</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-carrot"></i>
+                    <div class="product-tag">老年猫配方</div>
+                </div>
+                <div class="product-info">
+                    <h3>全价老年猫粮</h3>
+                    <p>针对老年猫特殊需求，添加关节保健成分，易消化配方呵护肠胃健康。</p>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-joint"></i>
+                            <span>关节保健</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-kidneys"></i>
+                            <span>肾脏支持</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-weight"></i>
+                            <span>体重管理</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price">
+                        <div class="amount">¥218</div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 选购指南 -->
+    <section class="container">
+        <div class="section-title">
+            <h2>猫粮选购指南</h2>
+        </div>
+        
+        <div class="guide">
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>了解猫咪生命阶段需求</h3>
+                        <p>幼猫、成猫和老年猫的营养需求不同。幼猫需要高能量高蛋白支持生长，老年猫则需要易消化配方和关节保健成分。</p>
+                    </div>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>查看成分表</h3>
+                        <p>优质猫粮应以肉类为主要成分，避免含有过多谷物、人工添加剂和填充物。前5种成分应为明确的动物蛋白来源。</p>
+                    </div>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>关注营养均衡</h3>
+                        <p>确保猫粮含有足够的蛋白质（30%以上）、适量脂肪（15-20%）以及必需的维生素、矿物质和牛磺酸。</p>
+                    </div>
+                </div>
+                
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>考虑特殊需求</h3>
+                        <p>如果猫咪有特殊健康问题（如泌尿系统疾病、过敏或肥胖），应选择相应的处方粮或特殊配方猫粮。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 营养信息 -->
+    <section class="container">
+        <div class="section-title">
+            <h2>猫粮营养标准</h2>
+        </div>
+        
+        <div class="nutrition">
+            <h3>优质猫粮关键营养成分表</h3>
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th>营养成分</th>
+                        <th>幼猫需求</th>
+                        <th>成猫需求</th>
+                        <th>老年猫需求</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>粗蛋白质</td>
+                        <td>≥30%</td>
+                        <td>≥26%</td>
+                        <td>≥28%</td>
+                    </tr>
+                    <tr>
+                        <td>粗脂肪</td>
+                        <td>≥18%</td>
+                        <td>≥9%</td>
+                        <td>≥10%</td>
+                    </tr>
+                    <tr>
+                        <td>牛磺酸</td>
+                        <td>≥0.2%</td>
+                        <td>≥0.1%</td>
+                        <td>≥0.15%</td>
+                    </tr>
+                    <tr>
+                        <td>钙</td>
+                        <td>1.0-1.8%</td>
+                        <td>0.6-1.0%</td>
+                        <td>0.8-1.2%</td>
+                    </tr>
+                    <tr>
+                        <td>磷</td>
+                        <td>0.8-1.6%</td>
+                        <td>0.5-0.9%</td>
+                        <td>0.6-1.0%</td>
+                    </tr>
+                    <tr>
+                        <td>膳食纤维</td>
+                        <td>≤5%</td>
+                        <td>≤8%</td>
+                        <td>≤10%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>喵星人营养站致力于为爱猫人士提供专业的猫粮选购指南和科学喂养知识，帮助猫咪获得最佳营养。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">产品推荐</a></li>
+                        <li><a href="#">营养指南</a></li>
+                        <li><a href="#">喂养技巧</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@catnutrition.com</li>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 上海市浦东新区喵星路123号</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 喵星人营养站 - 专业的猫粮选购指南平台 | 本网站内容仅供参考</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
